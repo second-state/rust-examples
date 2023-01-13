@@ -5,7 +5,7 @@ Please [install the prerequisites](../README.md) first!
 ## Quick start with Docker
 
 ```
-$ docker run secondstate/rust-example-string:latest
+$ docker run --rm --runtime=io.containerd.wasmedge.v1 --platform=wasi/wasm32 secondstate/rust-example-string:latest
 Hello WasmEdge!
 Howdy WasmEdge!
 Howdy WasmEdge! -- from Texas
