@@ -8,7 +8,6 @@ Please [install the prerequisites](../README.md) first!
 $ docker run --rm --runtime=io.containerd.wasmedge.v1 --platform=wasi/wasm32 secondstate/rust-example-control:latest
 Hello WasmEdge!
 Howdy WasmEdge!
-Howdy WasmEdge!
 Hola WasmEdge!
 Bonjour WasmEdge!
 guten tag WasmEdge!
@@ -39,7 +38,6 @@ Run the Wasm bytecode file in WasmEdge CLI.
 ```
 $ wasmedge target/wasm32-wasi/debug/control.wasm
 Hello WasmEdge!
-Howdy WasmEdge!
 Howdy WasmEdge!
 Hola WasmEdge!
 Bonjour WasmEdge!
@@ -73,7 +71,7 @@ you will need to specify a special annotation for the image so that `crun` known
 In this example, we push the image to Docker Hub with a `crun` tag.
 
 ```
-$ sudo buildah build --annotation "module.wasm.image/variant=compat-smart" -t rust-example-move .
+$ sudo buildah build --annotation "module.wasm.image/variant=compat-smart" -t rust-example-control .
 #
 # make sure docker is install and running
 # systemctl status docker
