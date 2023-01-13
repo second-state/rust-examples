@@ -6,20 +6,19 @@ Please [install the prerequisites](../README.md) first!
 
 ```
 $ docker run --rm --runtime=io.containerd.wasmedge.v1 --platform=wasi/wasm32 secondstate/rust-example-string:latest
+... ART ...
 Hello WasmEdge!
 Howdy WasmEdge!
 Howdy WasmEdge! -- from Texas
-... ...
 ```
 
 ## Code
 
 The [`src/main.rs`](src/main.rs) source code shows
 
+* The Rust string can hold special characters and line breaks. The `art` variable is a complex string literal. It prints an ASCII art on the console.
 * The `hello` variable is an immutable `&str` type. So, when you operate on it, the operation / function returns a `String` type.
 * The `String` type variable `howdy` can now be manipulated and changed. It is very much like a `StringBuffer` in the Java world.
-* Finally, we want to show you how to create a string literal `art` with special characters and line breaks. It prints an ASCII art on the console.
-
 
 ## Step by step guide
 
@@ -33,10 +32,10 @@ Run the Wasm bytecode file in WasmEdge CLI.
 
 ```
 $ wasmedge target/wasm32-wasi/debug/string.wasm
+... ART ...
 Hello WasmEdge!
 Howdy WasmEdge!
 Howdy WasmEdge! -- from Texas
-... ...
 ```
 
 ## Build and publish on Docker
