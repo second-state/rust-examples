@@ -22,8 +22,8 @@ The [`src/main.rs`](src/main.rs) source code shows how to start an async server 
 * The `main()` function is now an `async` function and annotated with the `tokio` macro. That means the tokio controller can spawn multiple instances of the `main()` app.
 * Each instance of the `main()` app listens at port 8080 without blocking the port for everyone else. It receives a data `stream` for each incoming HTTP connection it captures.
   * The `accept()` function runs in a loop. It accepts an incoming connection, processes its data, and then start over.
-  * The `await` means that the function is async. Multiple instances of an async function can run at the same time. When an async function instance returns, the `await` unblocks the next lines of code and allows the program to continue.
-  * In our case, multiple instances of the `accept()` function can listen to the same port. When a request comes in, an instance of `accept()` will receive and process its data, while other instances of `accept()` can wait or process other requests at the same time.
+  * Since the data connection could be slow, the `accept()` function could take a long time to return. But it is async, meaning that multiple instances of `accept()` could run concurrently to receive data from multiple connections on the same port.
+  * The `await` blocks each instance of `accept()` so that the statements after `accept()` would not run until `accept()` receives all the data in a connection and returns.
 * The `tokio::task::spawn` API designate the `handle_request()` function to be called whenever the data `stream` is available.
 * The data in the `stream`, which is a HTTP request is passed to `handle_request()`, and the function returns an HTTP response struct.
 * Inside `handle_request()`, it matches both the HTTP request method and path.
