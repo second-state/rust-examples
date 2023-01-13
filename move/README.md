@@ -1,4 +1,4 @@
-# Strings
+# Ownership and borrowing references
 
 Please [install the prerequisites](../README.md) first!
 

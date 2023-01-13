@@ -1,4 +1,4 @@
-# Strings
+# Calling functions
 
 Please [install the prerequisites](../README.md) first!
 

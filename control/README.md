@@ -1,4 +1,4 @@
-# Strings
+# Control flows
 
 Please [install the prerequisites](../README.md) first!
 
