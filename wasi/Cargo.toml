@@ -1,0 +1,12 @@
+[package]
+name = "wasi"
+version = "0.1.0"
+authors = ["ubuntu"]
+edition = "2018"
+
+[[bin]]
+name = "wasi"
+path = "src/main.rs"
+
+[dependencies]
+rand = "0.7.3"
