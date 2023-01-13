@@ -5,7 +5,7 @@ authors = ["ubuntu"]
 edition = "2018"
 
 [[bin]]
-name = "string"
+name = "move"
 path = "src/main.rs"
 
 [dependencies]
