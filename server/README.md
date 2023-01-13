@@ -5,18 +5,14 @@ Please [install the prerequisites](../README.md) first!
 ## Quick start with Docker
 
 ```
-$ docker run --rm --runtime=io.containerd.wasmedge.v1 --platform=wasi/wasm32 secondstate/rust-example-server:latest
-Listening on http://0.0.0.0:8080
-```
+$ docker run -dp 8080:8080 --rm --runtime=io.containerd.wasmedge.v1 --platform=wasi/wasm32 secondstate/rust-example-server:latest
+... ...
 
-From another terminal window, do the following.
-
-```
 $ curl http://localhost:8080/
 Try POSTing data to /echo such as: `curl localhost:8080/echo -XPOST -d 'hello world'`
 
-$ curl http://localhost:8080/echo -X POST -d "Hello WasmEdge!"
-Hello WasmEdge!
+$ curl http://localhost:8080/echo -X POST -d "Hello WasmEdge"
+Hello WasmEdge
 ```
 
 ## Code
@@ -56,8 +52,8 @@ From another terminal window, do the following.
 $ curl http://localhost:8080/
 Try POSTing data to /echo such as: `curl localhost:8080/echo -XPOST -d 'hello world'`
 
-$ curl http://localhost:8080/echo -X POST -d "Hello WasmEdge!"
-Hello WasmEdge!
+$ curl http://localhost:8080/echo -X POST -d "Hello WasmEdge"
+Hello WasmEdge
 ```
 
 ## Build and publish on Docker
