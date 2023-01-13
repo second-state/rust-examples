@@ -1,12 +1,13 @@
 fn main() {
-  let s : &str = "Hello WasmEdge!";
-  let hello : String = String::from(s);
-  let howdy : String = hello.replace("Hello", "Howdy");
-
+  let hello : &str = "Hello WasmEdge!";
+  let mut howdy : String = hello.replace("Hello", "Howdy");
   println!("{}", hello);
   println!("{}", howdy);
+  
+  howdy.push_str(" -- from Texas");
+  println!("{}", howdy);
 
-  let ls : &str = r#"
+  let art : &str = r#"
  █     █░ ▄▄▄        ██████  ███▄ ▄███▓▓█████ ▓█████▄   ▄████ ▓█████ 
 ▓█░ █ ░█░▒████▄    ▒██    ▒ ▓██▒▀█▀ ██▒▓█   ▀ ▒██▀ ██▌ ██▒ ▀█▒▓█   ▀ 
 ▒█░ █ ░█ ▒██  ▀█▄  ░ ▓██▄   ▓██    ▓██░▒███   ░██   █▌▒██░▄▄▄░▒███   
@@ -18,5 +19,6 @@ fn main() {
     ░          ░  ░      ░         ░      ░  ░   ░          ░    ░  ░
                                                ░                     
   "#;
-  println!("{}", ls);
+  println!("{}", art);
 }
+
