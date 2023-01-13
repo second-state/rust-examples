@@ -12,9 +12,9 @@ $ docker run --rm --runtime=io.containerd.wasmedge.v1 --platform=wasi/wasm32 sec
 
 The [`src/main.rs`](src/main.rs) source code shows
 
-* The `hello` variable is an immutable `&str` type. So, when you operate on it, the operation / function returns a `String` type.
-* The `String` type variable `howdy` can now be manipulated and changed. It is very much like a `StringBuffer` in the Java world.
-* Finally, we want to show you how to create a string literal `art` with special characters and line breaks. It prints an ASCII art on the console.
+* When the `hello` string variable is passed into the `take()` function, it is no longer available outside of `take()`.
+* You can create a `clone()` of the `hello` string variable to pass to `take()`. This way, the original `hello` is still available outside of `take()`.
+* You can also pass a reference of the `hello` string to the `borrow()` function. Since the `borrow()` function only borrowed a reference of this variable, the original `hello` is still available outside of `borrow()`.
 
 
 ## Step by step guide
