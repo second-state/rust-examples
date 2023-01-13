@@ -23,9 +23,11 @@ This set of examples demonstrate Rust apps that each has a `main()` function and
 > The standalone applications are dockerized so that you can get started easily.
 
 * [Hello world](hello/)
+* [Working with strings](string/)
+* [Ownership and move](move/)
+* [Control flows](control/)
 * [Data types and structures](struct/)
 * [Functions and return values](function/)
-* [Ownership and move](move/)
 * [Use OS system libraries](wasi/)
 * [Create an HTTP server](server/)
 
