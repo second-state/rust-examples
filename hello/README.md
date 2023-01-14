@@ -5,7 +5,7 @@ Please [install the prerequisites](../README.md) first!
 ## Quick start with Docker
 
 ```
-$ docker run --rm --runtime=io.containerd.wasmedge.v1 --platform=wasi/wasm32 secondstate/rust-example-hello:latest
+$ docker run --rm --runtime=io.containerd.wasmedge.v1 --platform=wasi/wasm secondstate/rust-example-hello:latest
 Hello WasmEdge!
 ```
 
@@ -40,10 +40,10 @@ Now, we need to publish the container image to Docker Hub. The process is slight
 ### For Docker Desktop and containerd
 
 For containerd based systems, such as the Docker Desktop and many flavors of Kubernetes, 
-you just need to specify that the WasmEdge application image is for the `wasi/wasm32` platform.
+you just need to specify that the WasmEdge application image is for the `wasi/wasm` platform.
 
 ```
-$ docker buildx build --platform wasi/wasm32 -t secondstate/rust-example-hello .
+$ docker buildx build --platform wasi/wasm -t secondstate/rust-example-hello .
 ... ...
 $ docker push secondstate/rust-example-hello
 ```
