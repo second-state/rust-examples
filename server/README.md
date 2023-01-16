@@ -36,13 +36,13 @@ The [`src/main.rs`](src/main.rs) source code shows how to start an async server 
 Compile the Rust source code project to a Wasm bytecode file.
 
 ```
-$ cargo build --target wasm32-wasi
+$ cargo build --target wasm32-wasi --release
 ```
 
 Run the Wasm bytecode file in WasmEdge CLI.
 
 ```
-$ wasmedge target/wasm32-wasi/debug/server.wasm
+$ wasmedge target/wasm32-wasi/release/server.wasm
 Listening on http://0.0.0.0:8080
 ```
 
