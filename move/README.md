@@ -15,6 +15,8 @@ The [`src/main.rs`](src/main.rs) source code shows
 * When the `hello` string variable is passed into the `take()` function, it is no longer available outside of `take()`.
 * You can create a `clone()` of the `hello` string variable to pass to `take()`. This way, the original `hello` is still available outside of `take()`.
 * You can also pass a reference of the `hello` string to the `borrow()` function. Since the `borrow()` function only borrowed a reference of this variable, the original `hello` is still available outside of `borrow()`.
+  * The `&string` reference can be automatically cast to an immutable `&str`. So, the `borrow()` function can also take a `&str` as argument.
+* If the `hello` string is mutable and the passed reference is also mutable, you can make changes to the string through its reference inside the `borrow_mut()` function and the `hello` string outside of the function will be changed too. That is the "side effect" of pass-by-reference.
 
 
 ## Step by step guide

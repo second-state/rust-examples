@@ -28,7 +28,7 @@ The [`src/main.rs`](src/main.rs) source code shows how to start an async server 
 * The data in the `stream`, which is a HTTP request is passed to `handle_request()`, and the function returns an HTTP response struct.
 * Inside `handle_request()`, it matches both the HTTP request method and path.
   * If the HTTP request is a GET at `/`, it returns a response with a help message.
-  * If the HTTP request is a POST at `/echo`, it extracts the HTTP body and reverses it. The reversed string is returned as the HTTP response.
+  * If the HTTP request is a POST at `/echo`, it extracts the HTTP body and echoes it back as the HTTP response.
   * If no match is found, it returns an HTTP 404 error code.
 
 ## Step by step guide
