@@ -1,0 +1,48 @@
+name: Release
+on: [push]
+
+jobs:
+  build:
+    name: WASM examples
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          target: wasm32-wasi
+      - uses: actions-rs/cargo@v1
+        with:
+          command: build
+          args: --target wasm32-wasi --release
+
+      - name: Upload Artifacts
+        id: upload-artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: Artifacts
+          path: |
+            target/wasm32-wasi/release/*.wasm
+          if-no-files-found: error
+
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: main
+          release_name: Wasm Edge Build Files
+          draft: false
+          prerelease: false
+      - uses: xresloader/upload-to-github-release@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          file: "target/wasm32-wasi/release/*.wasm"
+          release_id: ${{ steps.create_release.outputs.id }}
+          overwrite: true
+          verbose: true
