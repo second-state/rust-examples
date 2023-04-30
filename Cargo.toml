@@ -1,0 +1,12 @@
+[workspace]
+
+members = [
+    "control",
+    "function",
+    "hello",
+    "move",
+    "server",
+    "string",
+    "struct",
+    "wasi",
+]
