@@ -34,7 +34,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: main
+          tag_name: ${{ github.ref }}
           release_name: Wasm Edge Build Files
           draft: false
           prerelease: false
