@@ -1,5 +1,6 @@
 [package]
 name = "struct"
+edition.workspace = true
 version.workspace = true
 authors.workspace = true
 description.workspace = true
