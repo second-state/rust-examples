@@ -16,6 +16,23 @@ rustup target add wasm32-wasi
 curl -sSf https://raw.githubusercontent.com/WasmEdge/WasmEdge/master/utils/install.sh | sudo bash -s -- -p /usr/local
 ```
 
+**Note**: Running `cargo build` in any package directory the output will get stored at parent directory of folder because of Cargo Workspace.
+
+```
+├── Cargo.lock
+├── Cargo.toml
+├── control
+├── function
+├── hello
+├── move
+├── README.md
+├── server
+├── string
+├── struct
+├── target # Your Build files
+└── wasi
+```
+
 ## Standalone examples
 
 This set of examples demonstrate Rust apps that each has a `main()` function and can be started and executed a standalone app.
