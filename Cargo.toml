@@ -1,0 +1,21 @@
+[workspace]
+
+members = [
+    "control",
+    "function",
+    "hello",
+    "move",
+    "server",
+    "string",
+    "struct",
+    "wasi",
+]
+
+[workspace.package]
+
+version = "0.1.0"
+authors = ["Michael Yuan <michael@secondstate.io>"]
+description = "Example Files for WasmEdge"
+homepage = "https://wasmedge.org"
+documentation = "https://wasmedge.org/docs/"
+edition = "2018"

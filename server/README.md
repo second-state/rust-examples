@@ -42,7 +42,7 @@ $ cargo build --target wasm32-wasi --release
 Run the Wasm bytecode file in WasmEdge CLI.
 
 ```
-$ wasmedge target/wasm32-wasi/release/server.wasm
+$ wasmedge ../target/wasm32-wasi/release/server.wasm
 Listening on http://0.0.0.0:8080
 ```
 
