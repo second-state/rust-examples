@@ -31,7 +31,7 @@ $ cargo build --target wasm32-wasi --release
 Run the Wasm bytecode file in WasmEdge CLI.
 
 ```
-$ wasmedge ../target/wasm32-wasi/release/string.wasm
+$ wasmedge target/wasm32-wasi/release/string.wasm
 ... ART ...
 Hello WasmEdge!
 Howdy WasmEdge!

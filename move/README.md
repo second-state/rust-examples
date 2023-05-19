@@ -30,7 +30,7 @@ $ cargo build --target wasm32-wasi --release
 Run the Wasm bytecode file in WasmEdge CLI.
 
 ```
-$ wasmedge ../target/wasm32-wasi/release/move.wasm
+$ wasmedge target/wasm32-wasi/release/move.wasm
 ```
 
 ## Build and publish on Docker

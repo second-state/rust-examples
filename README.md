@@ -6,7 +6,7 @@ Simple Rust applications that run in WasmEdge. They also serve as a good learnin
 
 You can just [install Docker Desktop](https://www.docker.com/products/docker-desktop/).
 
-Or, you could install [Rust](https://www.rust-lang.org/tools/install) and [WasmEdge](https://wasmedge.org/book/en/quick_start/install.html) as follows.
+Or, you could install [Rust](https://www.rust-lang.org/tools/install) and [WasmEdge](https://wasmedge.org/docs/develop/build-and-run/install) as follows.
 
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -15,8 +15,6 @@ rustup target add wasm32-wasi
 
 curl -sSf https://raw.githubusercontent.com/WasmEdge/WasmEdge/master/utils/install.sh | sudo bash -s -- -p /usr/local
 ```
-
-**Note**: Running `cargo build` in any package directory the output will get stored at parent directory of folder because of Cargo Workspace.
 
 ```
 ├── Cargo.lock
@@ -29,7 +27,6 @@ curl -sSf https://raw.githubusercontent.com/WasmEdge/WasmEdge/master/utils/insta
 ├── server
 ├── string
 ├── struct
-├── target # Your Build files
 └── wasi
 ```
 
@@ -47,14 +44,6 @@ This set of examples demonstrate Rust apps that each has a `main()` function and
 * [Functions and return values](function/)
 * [Use OS system libraries](wasi/)
 * [Create an HTTP server](server/)
-
-## Library examples
-
-This set of examples demonstrate Rust library functions that can be called from outside of the WasmEdge Runtime (i.e., in a host application).
-
-* [Add two numbers](add/)
-* [Pass a string to the function](string/)
-* [Parse JSON](json/)
 
 ## More examples
 
