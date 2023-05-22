@@ -40,7 +40,7 @@ Now, we need to publish the container image to Docker Hub.
 You just need to specify that the WasmEdge application image is for the `wasi/wasm` platform.
 
 ```
-$ docker buildx build --platform wasi/wasm -t secondstate/rust-example-move .
+$ docker buildx build --provenance=false --platform wasi/wasm -t secondstate/rust-example-move .
 ... ...
 $ docker push secondstate/rust-example-move
 ```
