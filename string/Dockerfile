@@ -18,5 +18,5 @@ COPY src ./src
 RUN cargo build --target wasm32-wasi --release
 
 FROM scratch
-ENTRYPOINT [ "string.wasm" ]
+ENTRYPOINT [ "/string.wasm" ]
 COPY --link --from=build /src/target/wasm32-wasi/release/string.wasm /string.wasm
