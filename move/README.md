@@ -2,12 +2,6 @@
 
 Please [install the prerequisites](../README.md) first!
 
-## Quick start with Docker
-
-```
-$ docker run --rm --runtime=io.containerd.wasmedge.v1 --platform=wasi/wasm secondstate/rust-example-move:latest
-```
-
 ## Code
 
 The [`src/main.rs`](src/main.rs) source code shows
@@ -44,3 +38,10 @@ $ docker buildx build --provenance=false --platform wasi/wasm -t secondstate/rus
 ... ...
 $ docker push secondstate/rust-example-move
 ```
+
+Then, with Docker Desktop and [Wasm support enabled](https://wasmedge.org/docs/start/build-and-run/docker_wasm), you can run it.
+
+```
+$ docker run --rm --runtime=io.containerd.wasmedge.v1 --platform=wasi/wasm secondstate/rust-example-move:latest
+```
+
