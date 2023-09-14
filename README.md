@@ -6,7 +6,7 @@ Simple Rust applications that run in WasmEdge. They also serve as a good learnin
 
 You can just [install Docker Desktop](https://www.docker.com/products/docker-desktop/).
 
-Or, you could install [Rust](https://www.rust-lang.org/tools/install) and [WasmEdge](https://wasmedge.org/docs/develop/build-and-run/install) as follows.
+Or, you could install [Rust](https://www.rust-lang.org/tools/install) and [WasmEdge](https://wasmedge.org/docs/start/install/) as follows.
 
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
