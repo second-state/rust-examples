@@ -8,7 +8,7 @@ The [`src/main.rs`](src/main.rs) source code shows
 
 * A standalone Rust app must have a `main()` function as the entry point.
 * In the `main()` function, we create a string. The string is `&str` type. In Rust, it is called a string slice meaning that this string is immutable.
-* We print the string using the `println!()` marco. The `!` indicates that it is a macro, which is a set of functions to perform the task of printing to the OS console. The Rust compile expands the macro into a set of functions at compile time. There are many such macros in Rust and it is crucial that you learn them!
+* We print the string using the `println!()` macro. The `!` indicates that it is a macro, which is a set of functions to perform the task of printing to the OS console. The Rust compile expands the macro into a set of functions at compile time. There are many such macros in Rust and it is crucial that you learn them!
 
 ## Step by step guide
 
