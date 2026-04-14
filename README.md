@@ -11,7 +11,7 @@ Or, you could install [Rust](https://www.rust-lang.org/tools/install) and [WasmE
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source "$HOME/.cargo/env"
-rustup target add wasm32-wasi
+rustup target add wasm32-wasip1
 
 curl -sSf https://raw.githubusercontent.com/WasmEdge/WasmEdge/master/utils/install.sh | sudo bash -s -- -p /usr/local
 ```

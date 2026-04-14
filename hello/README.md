@@ -15,13 +15,13 @@ The [`src/main.rs`](src/main.rs) source code shows
 Compile the Rust source code project to a Wasm bytecode file.
 
 ```
-$ cargo build --target wasm32-wasi --release
+$ cargo build --target wasm32-wasip1 --release
 ```
 
 Run the Wasm bytecode file in WasmEdge CLI.
 
 ```
-$ wasmedge target/wasm32-wasi/release/hello.wasm
+$ wasmedge target/wasm32-wasip1/release/hello.wasm
 Hello WasmEdge!
 ```
 
